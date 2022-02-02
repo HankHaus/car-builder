@@ -1,19 +1,38 @@
 import { CarBuilder } from "./CarBuilder.js"
+import { getOrders } from "./database.js"
+
+//const ordersArray = getOrders()
 
 const mainContainer = document.querySelector(".container")
 
+
 const renderAllHTML = () => {
-    mainContainer.innerHTML = "hello"
+    mainContainer.innerHTML = CarBuilder()
 }
 
+
+
+
 renderAllHTML()
-/*
+
+
+
+
 document.addEventListener(
-    "change",
+    "stateChanged",
     (changeEvent) => {
-        if (changeEvent.target.id === "resource") {
-            const chosenOption = changeEvent.target.value
-            console.log(chosenOption)  // "1" or "2"
+        console.log("state has been changed")
+        renderAllHTML()
         }
-    }
-)*/
+)
+
+
+
+/*
+export const orders = () => {
+   return `order #`
+}
+*/
+
+
+
